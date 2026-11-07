@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Unisabana Auth & TOTP",
+    "slug": "unisabana-auth-totp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "unisabana-auth",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#001e3d"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "edu.unisabana.authtotp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Permiso para escanear códigos QR de autenticación TOTP (otpauth://)"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#001e3d"
+      },
+      "package": "edu.unisabana.authtotp",
+      "permissions": [
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite acceder a la cámara para escanear códigos QR de 2FA."
+        }
+      ]
+    ]
+  }
+}
+
